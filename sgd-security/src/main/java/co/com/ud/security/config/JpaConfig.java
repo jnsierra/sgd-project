@@ -1,11 +1,11 @@
-package co.com.ud.repo.config;
+package co.com.ud.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-import co.com.ud.repo.entity.AuditorAwareImpl;
+import co.com.ud.security.audit.AuditorAwareImpl;
 
 @Configuration
 @EnableJpaAuditing(auditorAwareRef="auditorAware")

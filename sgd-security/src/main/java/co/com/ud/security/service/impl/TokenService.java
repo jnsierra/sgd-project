@@ -1,4 +1,4 @@
-package co.com.ud.bussines.service.impl;
+package co.com.ud.security.service.impl;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 
-import co.com.ud.bussines.service.ITokenService;
+import co.com.ud.security.service.ITokenService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.TextCodec;

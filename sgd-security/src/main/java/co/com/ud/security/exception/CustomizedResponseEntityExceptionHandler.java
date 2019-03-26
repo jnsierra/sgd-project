@@ -1,4 +1,4 @@
-package co.com.ud.util.exception;
+package co.com.ud.security.exception;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;

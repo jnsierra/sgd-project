@@ -7,7 +7,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import co.com.ud.bussines.service.IPersonaService;
+import co.com.ud.repo.entity.PersonaEntity;
 import co.com.ud.util.dto.PersonaDto;
 import co.com.ud.util.error.dto.ResponseRestService;
-import co.com.ud.repo.entity.PersonaEntity;
-import co.com.ud.bussines.service.IPersonaService;
 
 @RestController
 @RequestMapping("/v.1/persona")
@@ -30,7 +29,6 @@ public class PersonaController {
 	@Autowired
 	ModelMapper mapper;
 
-	@Secured("ROLE_ADMIN")
 	@RequestMapping(method = RequestMethod.POST, value = "/")
 	public ResponseEntity<ResponseRestService<PersonaDto>> save(@RequestBody PersonaDto personaDto) {
 		return new ResponseEntity<>(

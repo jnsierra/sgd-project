@@ -18,7 +18,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -48,7 +47,6 @@ public class UsuarioEntity extends Auditable<String> {
 	@NotNull
 	@NotBlank
 	@NotEmpty
-	@Min(value=6)
 	@Column(name = "tius_contra_act")
 	private String contrasena;
 	@NotNull
