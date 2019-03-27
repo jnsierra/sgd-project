@@ -11,13 +11,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import co.com.ud.repo.entity.audit.Auditable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name="ub_tciud")
 @Getter @Setter
-public class CiudadEntity {
+public class CiudadEntity extends Auditable<String> {
 	@Id
 	@Column(name="CIUD_CIUD")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ciud_generator")

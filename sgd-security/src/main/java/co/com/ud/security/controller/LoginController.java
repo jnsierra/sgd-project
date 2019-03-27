@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.com.ud.util.dto.LoginDto;
+import co.com.ud.util.dto.usuarios.LoginDto;
 import co.com.ud.util.error.dto.ResponseRestService;
 import co.com.ud.security.service.ITokenService;
-import co.com.ud.bussines.service.IRoleRestService;
-import co.com.ud.bussines.service.IUsuarioService;
+import co.com.ud.bussines.service.usuarios.IRoleRestService;
+import co.com.ud.bussines.service.usuarios.IUsuarioService;
 import co.com.ud.repo.entity.usuarios.RoleRestEntity;
 
 @RestController

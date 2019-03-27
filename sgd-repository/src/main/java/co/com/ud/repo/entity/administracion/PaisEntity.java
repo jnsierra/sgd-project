@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -18,6 +20,10 @@ import lombok.Setter;
 
 @Entity
 @Table(name="ub_tpais")
+@NamedQueries({
+	@NamedQuery(name="PaisEntity.findAllPaises", query=" from PaisEntity "),
+	@NamedQuery(name="PaisEntity.findPaisById", query =" from PaisEntity p inner join fetch p.departamentos dep where p.id = :id ")
+})
 @Getter @Setter
 public class PaisEntity extends Auditable<String> {
 	@Id
