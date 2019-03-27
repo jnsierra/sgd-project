@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ud.util.dto.RoleRestDto;
 import co.com.ud.util.error.dto.ResponseRestService;
-import co.com.ud.repo.entity.RoleRestEntity;
 import co.com.ud.bussines.service.IRoleRestService;
+import co.com.ud.repo.entity.usuarios.RoleRestEntity;
 
 @RestController
 @RequestMapping("/v.1/rolerest")

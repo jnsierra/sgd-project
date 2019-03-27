@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.ud.bussines.service.IPersonaService;
-import co.com.ud.repo.entity.PersonaEntity;
+import co.com.ud.repo.entity.usuarios.PersonaEntity;
 import co.com.ud.repo.repository.IPersonaRepository;
 
 @Service

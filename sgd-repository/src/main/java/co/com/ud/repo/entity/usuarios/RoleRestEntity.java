@@ -1,4 +1,4 @@
-package co.com.ud.repo.entity;
+package co.com.ud.repo.entity.usuarios;
 
 import java.util.Set;
 
@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import co.com.ud.repo.entity.audit.Auditable;
 import lombok.Getter;
 import lombok.Setter;
 

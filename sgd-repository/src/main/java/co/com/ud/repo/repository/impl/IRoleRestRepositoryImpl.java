@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import co.com.ud.repo.entity.RoleRestEntity;
+import co.com.ud.repo.entity.usuarios.RoleRestEntity;
 import co.com.ud.repo.repository.IRoleRestRepositoryCustom;
 
 @Repository

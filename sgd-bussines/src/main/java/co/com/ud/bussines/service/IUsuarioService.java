@@ -2,7 +2,7 @@ package co.com.ud.bussines.service;
 
 import java.util.List;
 
-import co.com.ud.repo.entity.UsuarioEntity;
+import co.com.ud.repo.entity.usuarios.UsuarioEntity;
 
 public interface IUsuarioService {
 	/**

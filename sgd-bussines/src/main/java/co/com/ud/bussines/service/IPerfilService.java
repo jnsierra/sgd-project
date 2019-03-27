@@ -3,7 +3,7 @@ package co.com.ud.bussines.service;
 import java.util.List;
 import java.util.Optional;
 
-import co.com.ud.repo.entity.PerfilEntity;
+import co.com.ud.repo.entity.usuarios.PerfilEntity;
 
 public interface IPerfilService {
 	/**

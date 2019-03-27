@@ -2,6 +2,7 @@ package co.com.ud.security.controller;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ud.util.dto.LoginDto;
 import co.com.ud.util.error.dto.ResponseRestService;
-import co.com.ud.repo.entity.RoleRestEntity;
 import co.com.ud.security.service.ITokenService;
 import co.com.ud.bussines.service.IRoleRestService;
 import co.com.ud.bussines.service.IUsuarioService;
+import co.com.ud.repo.entity.usuarios.RoleRestEntity;
 
 @RestController
 public class LoginController {
@@ -37,7 +38,7 @@ public class LoginController {
 		if (!usuarioService.validateAuth(loginDto.getUsuario(), loginDto.getContrasena())) {
 			return new ResponseEntity<>(new ResponseRestService<>("Credenciales Invalidas"), HttpStatus.UNAUTHORIZED);
 		}
-		Optional<List<RoleRestEntity>> roles = roleRestService.findRolesByUser(loginDto.getUsuario());
+		Optional<Set<RoleRestEntity>> roles = roleRestService.findRolesByUser(loginDto.getUsuario());
 		if (!roles.isPresent()) {
 			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 		}

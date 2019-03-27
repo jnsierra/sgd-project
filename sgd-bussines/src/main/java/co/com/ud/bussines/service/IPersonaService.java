@@ -3,7 +3,7 @@ package co.com.ud.bussines.service;
 import java.util.List;
 import java.util.Optional;
 
-import co.com.ud.repo.entity.PersonaEntity;
+import co.com.ud.repo.entity.usuarios.PersonaEntity;
 
 public interface IPersonaService {
 	/**

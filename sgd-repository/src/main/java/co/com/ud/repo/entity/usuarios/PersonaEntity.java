@@ -1,4 +1,4 @@
-package co.com.ud.repo.entity;
+package co.com.ud.repo.entity.usuarios;
 
 import java.util.Calendar;
 
@@ -19,6 +19,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import co.com.ud.repo.entity.audit.Auditable;
 import lombok.Getter;
 import lombok.Setter;
 

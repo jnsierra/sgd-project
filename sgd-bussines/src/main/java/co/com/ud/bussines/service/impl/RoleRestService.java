@@ -2,13 +2,14 @@ package co.com.ud.bussines.service.impl;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.ud.bussines.service.IRoleRestService;
-import co.com.ud.repo.entity.RoleRestEntity;
-import co.com.ud.repo.entity.UsuarioEntity;
+import co.com.ud.repo.entity.usuarios.RoleRestEntity;
+import co.com.ud.repo.entity.usuarios.UsuarioEntity;
 import co.com.ud.repo.repository.IRoleRestRepository;
 import co.com.ud.repo.repository.IUsuarioRepository;
 
@@ -25,15 +26,15 @@ public class RoleRestService implements IRoleRestService {
 		return roleRestRepository.save(entity);
 	}
 
-//	@Override
-//	public Optional<List<RoleRestEntity>> findRolesByUser(String usuario) {
-//		Optional<UsuarioEntity> userEntity = usuarioRepository.findByUsuario(usuario);
-//		if(userEntity.isPresent()) {
-//			return Optional.of(userEntity.get().getRoles());
-//		}else {
-//			return Optional.empty();
-//		}
-//	}
+	@Override
+	public Optional<Set<RoleRestEntity>> findRolesByUser(String usuario) {
+		Optional<UsuarioEntity> userEntity = usuarioRepository.findByUsuario(usuario);
+		if(userEntity.isPresent()) {
+			return Optional.of(userEntity.get().getRolesRest());
+		}else {
+			return Optional.empty();
+		}
+	}
 
 	@Override
 	public Optional<Boolean> modifyRoleRestByUser(Long idUser, List<RoleRestEntity> idRoleRest) {
@@ -44,12 +45,6 @@ public class RoleRestService implements IRoleRestService {
 			return Optional.of(Boolean.FALSE);
 		}
 		return Optional.of(Boolean.TRUE);
-	}
-
-	@Override
-	public Optional<List<RoleRestEntity>> findRolesByUser(String usuario) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

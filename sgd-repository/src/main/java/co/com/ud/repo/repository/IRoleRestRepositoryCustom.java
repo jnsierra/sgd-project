@@ -2,7 +2,7 @@ package co.com.ud.repo.repository;
 
 import java.util.List;
 
-import co.com.ud.repo.entity.RoleRestEntity;
+import co.com.ud.repo.entity.usuarios.RoleRestEntity;
 
 public interface IRoleRestRepositoryCustom {
 	/**

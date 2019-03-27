@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ud.bussines.service.IPersonaService;
-import co.com.ud.repo.entity.PersonaEntity;
+import co.com.ud.repo.entity.usuarios.PersonaEntity;
 import co.com.ud.util.dto.PersonaDto;
 import co.com.ud.util.error.dto.ResponseRestService;
 

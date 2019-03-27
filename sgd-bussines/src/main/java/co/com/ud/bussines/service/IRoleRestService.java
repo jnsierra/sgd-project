@@ -2,8 +2,9 @@ package co.com.ud.bussines.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
-import co.com.ud.repo.entity.RoleRestEntity;
+import co.com.ud.repo.entity.usuarios.RoleRestEntity;
 
 public interface IRoleRestService {
 	
@@ -17,7 +18,7 @@ public interface IRoleRestService {
 	 * Metodo con el cual por medio del usuario se buscan los roles 
 	 * @return
 	 */
-	Optional<List<RoleRestEntity>> findRolesByUser(String usuario);
+	Optional<Set<RoleRestEntity>> findRolesByUser(String usuario);
 	
 	/**
 	 * Metodo con el cual modifico los roles rest de un usuario de un usuario 

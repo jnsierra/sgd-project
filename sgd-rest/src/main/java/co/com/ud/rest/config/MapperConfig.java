@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import co.com.ud.repo.entity.UsuarioEntity;
+import co.com.ud.repo.entity.usuarios.UsuarioEntity;
 import co.com.ud.util.dto.UsuarioDto;
 
 @Configuration

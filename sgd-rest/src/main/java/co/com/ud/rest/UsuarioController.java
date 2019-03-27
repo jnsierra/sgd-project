@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ud.util.dto.UsuarioDto;
 import co.com.ud.util.error.dto.ResponseRestService;
-import co.com.ud.repo.entity.UsuarioEntity;
 import co.com.ud.bussines.service.IRoleRestService;
 import co.com.ud.bussines.service.IUsuarioService;
+import co.com.ud.repo.entity.usuarios.UsuarioEntity;
 
 @RestController
 @RequestMapping("/v.1/usuario")

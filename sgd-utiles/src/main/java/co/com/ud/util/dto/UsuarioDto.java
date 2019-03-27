@@ -1,6 +1,7 @@
 package co.com.ud.util.dto;
 
 import java.util.List;
+import java.util.Set;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,5 +16,6 @@ public class UsuarioDto {
 	private PersonaDto persona;
 	private Long sede;
 	private List<RoleRestDto> rolesRest;
+	private Set<PerfilDto> perfiles;
 	
 }

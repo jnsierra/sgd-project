@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.ud.bussines.service.IPerfilService;
-import co.com.ud.repo.entity.PerfilEntity;
+import co.com.ud.repo.entity.usuarios.PerfilEntity;
 import co.com.ud.repo.repository.IPerfilRepository;
 
 @Service

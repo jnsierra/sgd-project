@@ -2,7 +2,7 @@ package co.com.ud.repo.repository;
 
 import java.util.Optional;
 
-import co.com.ud.repo.entity.PerfilEntity;
+import co.com.ud.repo.entity.usuarios.PerfilEntity;
 
 public interface IPerfilRepositoryCustom {
 	/**

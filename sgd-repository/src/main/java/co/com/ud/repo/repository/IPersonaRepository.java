@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import co.com.ud.repo.entity.PersonaEntity;
+import co.com.ud.repo.entity.usuarios.PersonaEntity;
 
 @Repository
 public interface IPersonaRepository extends CrudRepository<PersonaEntity, Long> , JpaRepository<PersonaEntity, Long>{

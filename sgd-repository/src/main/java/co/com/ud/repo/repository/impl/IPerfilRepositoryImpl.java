@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import co.com.ud.repo.entity.PerfilEntity;
+import co.com.ud.repo.entity.usuarios.PerfilEntity;
 import co.com.ud.repo.repository.IPerfilRepositoryCustom;
 
 @Repository

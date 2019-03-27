@@ -1,4 +1,4 @@
-package co.com.ud.repo.entity;
+package co.com.ud.repo.entity.audit;
 
 import java.util.Date;
 

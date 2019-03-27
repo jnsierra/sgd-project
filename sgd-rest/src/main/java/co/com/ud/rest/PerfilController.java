@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ud.bussines.service.IPerfilService;
-import co.com.ud.repo.entity.PerfilEntity;
+import co.com.ud.repo.entity.usuarios.PerfilEntity;
 import co.com.ud.util.dto.PerfilDto;
 import co.com.ud.util.error.dto.ResponseRestService;
 

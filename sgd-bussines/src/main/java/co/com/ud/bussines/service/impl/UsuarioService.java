@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.ud.bussines.service.IUsuarioService;
-import co.com.ud.repo.entity.UsuarioEntity;
+import co.com.ud.repo.entity.usuarios.UsuarioEntity;
 import co.com.ud.repo.repository.IUsuarioRepository;
 
 @Service
@@ -22,7 +22,7 @@ public class UsuarioService implements IUsuarioService {
 
 	@Override
 	public List<UsuarioEntity> getAll() {
-		return usuarioRepository.getAll();
+		return usuarioRepository.getAllUsers();
 	}
 
 	@Override

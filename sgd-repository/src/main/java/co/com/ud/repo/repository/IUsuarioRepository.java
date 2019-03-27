@@ -4,12 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import co.com.ud.repo.entity.UsuarioEntity;
+import co.com.ud.repo.entity.usuarios.UsuarioEntity;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository<UsuarioEntity, Long>, CrudRepository<UsuarioEntity, Long> {
@@ -17,8 +16,7 @@ public interface IUsuarioRepository extends JpaRepository<UsuarioEntity, Long>, 
 	 * Metodo con el cual obtengo todos los usuarios parametrizados en el sistema
 	 * @return
 	 */
-	@Query(value= "select distinct u from UsuarioEntity u inner join fetch u.rolesRest rol ")
-	List<UsuarioEntity> getAll();
+	List<UsuarioEntity> getAllUsers();
 	/**
 	 * Query con el cual se autenticara un usuario
 	 * @param usuario
