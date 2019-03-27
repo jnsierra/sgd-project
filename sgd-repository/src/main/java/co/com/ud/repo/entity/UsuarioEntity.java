@@ -1,7 +1,6 @@
 package co.com.ud.repo.entity;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -29,10 +28,8 @@ import lombok.Setter;
 @Table(name = "us_ttius")
 @NamedQueries({
 		@NamedQuery(name = "UsuarioEntity.getAll", query = "select usuarioEntity from UsuarioEntity usuarioEntity inner join usuarioEntity.persona persona "),
-		@NamedQuery(name = "UsuarioEntity.authenticateUser", query = "select usuarioEntity from UsuarioEntity usuarioEntity where usuarioEntity.usuario = :usuario and usuarioEntity.contrasena = :contrasena  ")
-})
-@Getter
-@Setter
+		@NamedQuery(name = "UsuarioEntity.authenticateUser", query = "select usuarioEntity from UsuarioEntity usuarioEntity where usuarioEntity.usuario = :usuario and usuarioEntity.contrasena = :contrasena  ") })
+@Getter @Setter
 public class UsuarioEntity extends Auditable<String> {
 	@Id
 	@Column(name = "tius_tius", nullable = false, updatable = false)
@@ -55,24 +52,12 @@ public class UsuarioEntity extends Auditable<String> {
 	private PersonaEntity persona;
 	@Column(name = "tius_sede")
 	private Long sede;
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "usuario_rolerest", joinColumns = @JoinColumn(name = "tius_tius"), inverseJoinColumns = @JoinColumn(name = "rore_rore"))
-	private List<RoleRestEntity> rolesRest;
-
-	public void addRoleRest(RoleRestEntity roleRest) {
-		if (rolesRest == null) {
-			rolesRest = new ArrayList<RoleRestEntity>();
-		}
-		rolesRest.add(roleRest);
-		roleRest.getUsuarios().add(this);
+	private Set<RoleRestEntity> rolesRest;
+	
+	public UsuarioEntity() {
+		super();
 	}
-
-	public void removeRoleRest(RoleRestEntity roleRest) {
-		if (rolesRest == null) {
-			rolesRest = new ArrayList<RoleRestEntity>();
-		}
-		rolesRest.remove(roleRest);
-		roleRest.getUsuarios().remove(this);
-	}
-
+	
 }
