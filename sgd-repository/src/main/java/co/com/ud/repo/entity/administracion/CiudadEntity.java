@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+
 import co.com.ud.repo.entity.audit.Auditable;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +20,7 @@ import lombok.Setter;
 @Entity
 @Table(name="ub_tciud")
 @Getter @Setter
+@Audited
 public class CiudadEntity extends Auditable<String> {
 	@Id
 	@Column(name="CIUD_CIUD")
@@ -38,6 +41,6 @@ public class CiudadEntity extends Auditable<String> {
 	private String codigo;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="ciud_depa")
+	@JoinColumn(name="ciud_depa", nullable=false)
 	private DepartamentoEntity departamento;
 }

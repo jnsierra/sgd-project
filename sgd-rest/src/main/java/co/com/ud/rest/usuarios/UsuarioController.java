@@ -51,7 +51,7 @@ public class UsuarioController {
 //	@RequestMapping(method = RequestMethod.PUT, value = "/rolerest/")
 //	public ResponseEntity<ResponseRestService<Boolean>> modifyRolesRestByUser(@RequestBody UsuarioDto usuario) {
 //		if (!roleRestService
-//				.modifyRoleRestByUser(usuario.getId(), mapper.map(usuario, UsuarioEntity.class).getRoles())
+//				.modifyRoleRestByUser(usuario.getId(), mapper.map(usuario, UsuarioEntity.class).getRolesRest())
 //				.isPresent()) {
 //			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 //		}

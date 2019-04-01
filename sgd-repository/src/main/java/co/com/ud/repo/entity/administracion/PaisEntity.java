@@ -14,6 +14,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+
 import co.com.ud.repo.entity.audit.Auditable;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +27,7 @@ import lombok.Setter;
 	@NamedQuery(name="PaisEntity.findPaisById", query =" from PaisEntity p inner join fetch p.departamentos dep where p.id = :id ")
 })
 @Getter @Setter
+@Audited
 public class PaisEntity extends Auditable<String> {
 	@Id
 	@Column(name="pais_pais")
